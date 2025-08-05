@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1= title
+    a(href='/update-cobj') Add to this table
+    table
+      thead
+        tr
+          th Name
+          th Price
+          th Release Year
+          th Genre
+          th Developer
+          th Publisher
+      tbody
+        if objects
+          each obj in objects
+            tr
+              td= obj.properties.name
+              td= obj.properties.price
+              td= obj.properties.release_year
+              td= obj.properties.genre
+              td= obj.properties.developer
+              td= obj.properties.publisher
