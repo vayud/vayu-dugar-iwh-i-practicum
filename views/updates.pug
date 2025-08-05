@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1= title
+    form(action='/update-cobj', method='POST')
+      div
+        label(for='name') Name:
+        input(type='text', id='name', name='name', required)
+      div
+        label(for='price') Price:
+        input(type='number', id='price', name='price', required)
+      div
+        label(for='release_year') Release Year:
+        input(type='number', id='release_year', name='release_year', required)
+      div
+        label(for='genre') Genre:
+        input(type='text', id='genre', name='genre', required)
+      div
+        label(for='developer') Developer:
+        input(type='text', id='developer', name='developer', required)
+      div
+        label(for='publisher') Publisher:
+        input(type='text', id='publisher', name='publisher', required)
+      button(type='submit') Create
+    a(href='/') Return to the homepage
